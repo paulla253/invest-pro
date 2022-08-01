@@ -1,6 +1,6 @@
-import { InvestimentRate } from './investment-rate.value-object';
+import { InvestimentRate } from './rate.value-object';
 
-describe('InvestimentRate - Value ', () => {
+describe('Rate - Value ', () => {
   const valueInvalid = [undefined, null, NaN, 0];
 
   it.each(valueInvalid)('shold THROW value if parameter is invalid', (invalid) => {
