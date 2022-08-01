@@ -4,7 +4,7 @@ export class Broker {
     if (!_value) {
       throw new Error('broker is requeried');
     }
-    if (_value.length <= this.MAX_CHARACTER) {
+    if (_value.length > this.MAX_CHARACTER) {
       throw new Error('broker is length max ' + this.MAX_CHARACTER);
     }
   }
