@@ -1,10 +1,11 @@
 export class Type {
+  private MAX_CHARACTER = 20;
   constructor(private _value: string) {
     if (!_value) {
       throw new Error('type is requeried');
     }
-    if (_value.length > 20) {
-      throw new Error('type is length max 20');
+    if (_value.length > this.MAX_CHARACTER) {
+      throw new Error('type is length max ' + this.MAX_CHARACTER);
     }
   }
 
