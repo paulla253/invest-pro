@@ -1,9 +1,9 @@
 import { Type } from './type.value-object';
 
-describe('Type - Value ', () => {
+describe('Type - Value Object ', () => {
   const valueInvalid = [undefined, null, '', 'x'.repeat(21)];
 
-  it.each(valueInvalid)('shold THROW value if parameter is invalid', (invalid) => {
+  it.each(valueInvalid)('shold THROW value if value is %s', (invalid) => {
     expect(() => new Type(invalid)).toThrow();
   });
 
