@@ -1,9 +1,9 @@
 import { InvestimentRate } from './rate.value-object';
 
-describe('Rate - Value ', () => {
+describe('Rate - Value object ', () => {
   const valueInvalid = [undefined, null, NaN, 0];
 
-  it.each(valueInvalid)('shold THROW value if parameter is invalid', (invalid) => {
+  it.each(valueInvalid)('shold THROW value if parameter %s', (invalid) => {
     expect(() => new InvestimentRate(invalid)).toThrow();
   });
 
