@@ -1,9 +1,9 @@
 import { Money } from './money.value-object';
 
-describe('Money - Value ', () => {
+describe('Money - Value Object ', () => {
   const valueInvalid = [undefined, null, NaN, 0, -5];
 
-  it.each(valueInvalid)('shold THROW value if parameter is invalid', (invalid) => {
+  it.each(valueInvalid)('shold THROW value if parameter %s', (invalid) => {
     expect(() => new Money(invalid)).toThrow();
   });
 
