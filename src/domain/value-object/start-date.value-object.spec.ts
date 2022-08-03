@@ -1,6 +1,12 @@
 import { StartDate } from './start-date.value-object';
 
 describe('StartDate - Value Object ', () => {
+  const valueInvalid = [undefined, null];
+
+  it.each(valueInvalid)('shold THROW value if paramter is %s', (invalid) => {
+    expect(() => new StartDate(invalid)).toThrow();
+  });
+
   it('shold THROW value if parameter is invalid', () => {
     const date = new Date(2022, 10, 10);
     const dateComparison = new Date(2022, 8, 1);
