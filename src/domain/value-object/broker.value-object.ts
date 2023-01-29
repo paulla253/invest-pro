@@ -1,15 +1,20 @@
 export class Broker {
-  private MAX_CHARACTER = 150;
-  constructor(private _value: string) {
-    if (!_value) {
-      throw new Error('broker is requeried');
-    }
-    if (_value.length > this.MAX_CHARACTER) {
-      throw new Error('broker is length max ' + this.MAX_CHARACTER);
-    }
+  constructor(private readonly broker: string) {
+    this.validate(broker);
   }
 
   public get value(): string {
-    return this._value.toUpperCase();
+    return this.broker.toUpperCase();
+  }
+
+  private validate(value: string) {
+    const MAX_CHARACTER = 150;
+
+    if (!value) {
+      throw new Error('broker is requeried');
+    }
+    if (value.length > MAX_CHARACTER) {
+      throw new Error('broker is length max ' + MAX_CHARACTER);
+    }
   }
 }

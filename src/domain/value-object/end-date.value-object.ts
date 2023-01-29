@@ -1,11 +1,15 @@
 export class EndDate {
-  constructor(private _value: Date) {
-    if (!_value) {
-      throw new Error('endDate is required');
-    }
+  constructor(private readonly endDate: Date) {
+    this.validate(endDate);
   }
 
   public get value(): number {
-    return this._value.getTime();
+    return this.endDate.getTime();
+  }
+
+  private validate(endDate: Date) {
+    if (!endDate) {
+      throw new Error('endDate is required');
+    }
   }
 }

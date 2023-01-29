@@ -1,11 +1,15 @@
 export class InvestimentRate {
-  constructor(private readonly _value) {
-    if (!_value) {
-      throw new Error('investimentRate is requeried');
-    }
+  constructor(private readonly rate: number) {
+    this.validate(rate);
   }
 
   public get value(): number {
-    return this._value;
+    return this.rate;
+  }
+
+  private validate(rate: number) {
+    if (!rate) {
+      throw new Error('investimentRate is requeried');
+    }
   }
 }

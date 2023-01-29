@@ -1,15 +1,20 @@
 export class Type {
-  private MAX_CHARACTER = 20;
-  constructor(private _value: string) {
-    if (!_value) {
-      throw new Error('type is requeried');
-    }
-    if (_value.length > this.MAX_CHARACTER) {
-      throw new Error('type is length max ' + this.MAX_CHARACTER);
-    }
+  constructor(private readonly type: string) {
+    this.validate(type);
   }
 
   public get value(): string {
-    return this._value.toUpperCase();
+    return this.type.toUpperCase();
+  }
+
+  private validate(type: string) {
+    const MAX_CHARACTER = 20;
+    
+    if (!type) {
+      throw new Error('type is requeried');
+    }
+    if (type.length > MAX_CHARACTER) {
+      throw new Error('type is length max ' + MAX_CHARACTER);
+    }
   }
 }

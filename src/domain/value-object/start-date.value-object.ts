@@ -1,10 +1,14 @@
 export class StartDate {
-  constructor(private _value: Date, dateComparison = new Date()) {
-    if (!_value) throw new Error('StartDate is requeried');
-    if (_value > dateComparison) throw new Error('startDate in the future');
+  constructor(private startDate: Date, dateComparison = new Date()) {
+    this.validate(startDate, dateComparison);
   }
 
   public get value(): number {
-    return this._value.getTime();
+    return this.startDate.getTime();
+  }
+
+  private validate(startDate: Date, dateComparison: Date) {
+    if (!startDate) throw new Error('StartDate is requeried');
+    if (startDate > dateComparison) throw new Error('startDate in the future');
   }
 }
