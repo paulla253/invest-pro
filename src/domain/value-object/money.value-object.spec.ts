@@ -9,6 +9,6 @@ describe('Money - Value Object', () => {
 
   it('shold CREATED value if parameter is valid', () => {
     const money = new Money(100);
-    expect(money.value).toBe(100);
+    expect(money.value()).toBe(100);
   });
 });

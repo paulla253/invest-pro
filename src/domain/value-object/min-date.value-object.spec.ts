@@ -12,6 +12,6 @@ describe('MinDate - Value Object', () => {
 
     const minDate = new MinDate(date);
 
-    expect(minDate.value).toBe(1662001200000);
+    expect(minDate.value()).toBe(1662001200000);
   });
 });

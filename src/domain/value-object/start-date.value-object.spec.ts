@@ -25,6 +25,6 @@ describe('StartDate - Value Object', () => {
 
     const startDate = new StartDate(date, dateComparison);
 
-    expect(startDate.value).toBe(1662001200000);
+    expect(startDate.value()).toBe(1662001200000);
   });
 });

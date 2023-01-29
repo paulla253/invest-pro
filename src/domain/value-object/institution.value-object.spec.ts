@@ -13,6 +13,6 @@ describe('Institution - Value Object', () => {
 
   it('shold CREATED value if parameter is valid', () => {
     const institution = new Institution('Institution Test');
-    expect(institution.value).toBe('INSTITUTION TEST');
+    expect(institution.value()).toBe('INSTITUTION TEST');
   });
 });

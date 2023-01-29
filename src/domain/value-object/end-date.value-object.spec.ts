@@ -12,6 +12,6 @@ describe('EndDate - Value Object', () => {
 
     const endDate = new EndDate(date);
 
-    expect(endDate.value).toBe(1662001200000);
+    expect(endDate.value()).toBe(1662001200000);
   });
 });

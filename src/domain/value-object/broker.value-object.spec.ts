@@ -13,6 +13,6 @@ describe('Broker - Value Object', () => {
 
   it('shold CREATED value if parameter is valid', () => {
     const type = new Broker('Broker Test');
-    expect(type.value).toBe('BROKER TEST');
+    expect(type.value()).toBe('BROKER TEST');
   });
 });
