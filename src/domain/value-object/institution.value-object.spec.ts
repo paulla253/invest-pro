@@ -1,6 +1,6 @@
 import { Institution } from './institution.value-object';
 
-describe('Institution - Value Object ', () => {
+describe('Institution - Value Object', () => {
   const valueInvalid = [undefined, null, ''];
 
   it.each(valueInvalid)('shold THROW value if parameter %s', (invalid) => {
@@ -12,7 +12,7 @@ describe('Institution - Value Object ', () => {
   });
 
   it('shold CREATED value if parameter is valid', () => {
-    const type = new Institution('Institution Test');
-    expect(type.value).toBe('INSTITUTION TEST');
+    const institution = new Institution('Institution Test');
+    expect(institution.value).toBe('INSTITUTION TEST');
   });
 });

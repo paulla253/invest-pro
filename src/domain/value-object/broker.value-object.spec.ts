@@ -1,6 +1,6 @@
 import { Broker } from './broker.value-object';
 
-describe('Broker - Value Object ', () => {
+describe('Broker - Value Object', () => {
   const valueInvalid = [undefined, null, ''];
 
   it.each(valueInvalid)('shold THROW value if parameter is %s', (invalid) => {

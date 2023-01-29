@@ -1,6 +1,6 @@
 import { StartDate } from './start-date.value-object';
 
-describe('StartDate - Value Object ', () => {
+describe('StartDate - Value Object', () => {
   const valueInvalid = [undefined, null];
 
   it.each(valueInvalid)('shold THROW value if paramter is %s', (invalid) => {
