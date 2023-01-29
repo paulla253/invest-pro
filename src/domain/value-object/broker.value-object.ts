@@ -3,7 +3,7 @@ export class Broker {
     this.validate(broker);
   }
 
-  public get value(): string {
+  public value(): string {
     return this.broker.toUpperCase();
   }
 

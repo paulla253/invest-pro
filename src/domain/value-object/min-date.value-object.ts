@@ -3,7 +3,7 @@ export class MinDate {
     this.validate(minDate);
   }
 
-  public get value(): number {
+  public value(): number {
     return this.minDate.getTime();
   }
 

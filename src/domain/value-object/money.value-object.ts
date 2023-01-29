@@ -3,7 +3,7 @@ export class Money {
     this.validate(money);
   }
 
-  public get value(): number {
+  public value(): number {
     return this.money;
   }
 

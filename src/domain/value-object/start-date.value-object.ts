@@ -3,7 +3,7 @@ export class StartDate {
     this.validate(startDate, dateComparison);
   }
 
-  public get value(): number {
+  public value(): number {
     return this.startDate.getTime();
   }
 

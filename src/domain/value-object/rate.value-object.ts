@@ -1,9 +1,9 @@
-export class InvestimentRate {
+export class Rate {
   constructor(private readonly rate: number) {
     this.validate(rate);
   }
 
-  public get value(): number {
+  public value(): number {
     return this.rate;
   }
 

@@ -3,7 +3,7 @@ export class EndDate {
     this.validate(endDate);
   }
 
-  public get value(): number {
+  public value(): number {
     return this.endDate.getTime();
   }
 
