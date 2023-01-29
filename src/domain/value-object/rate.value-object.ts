@@ -11,5 +11,8 @@ export class Rate {
     if (!rate) {
       throw new Error('investimentRate is requeried');
     }
+    if (rate < 0) {
+      throw new Error('investimentRate is positive');
+    }
   }
 }
