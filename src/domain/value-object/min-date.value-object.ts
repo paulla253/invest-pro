@@ -8,8 +8,6 @@ export class MinDate {
   }
 
   private validate(minDate: Date) {
-    if (!minDate) {
-      throw new Error('MinDate is required');
-    }
+    if (!minDate) throw new Error('MinDate is required');
   }
 }
