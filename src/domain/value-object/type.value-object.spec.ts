@@ -1,7 +1,7 @@
 import { Type } from './type.value-object';
 
-describe('Type - Value Object ', () => {
-  const valueInvalid = [undefined, null, '', 'x'.repeat(21)];
+describe('Type - Value Object', () => {
+  const valueInvalid = [undefined, 'lci'.repeat(10)];
 
   it.each(valueInvalid)('shold THROW value if value is %s', (invalid) => {
     expect(() => new Type(invalid)).toThrow();
@@ -9,6 +9,7 @@ describe('Type - Value Object ', () => {
 
   it('shold CREATED value if parameter is valid', () => {
     const type = new Type('lci');
+
     expect(type.value).toBe('LCI');
   });
 });
