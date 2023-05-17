@@ -1,4 +1,4 @@
-import { EndDate as MinDate } from './end-date.value-object';
+import { MinDate } from './min-date.value-object';
 
 describe('MinDate - Value Object', () => {
   const valueInvalid = [null, undefined];
