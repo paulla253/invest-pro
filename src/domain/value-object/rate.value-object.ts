@@ -9,7 +9,7 @@ export class Rate {
 
   private validate(rate: number) {
     if (!rate) {
-      throw new Error('investimentRate is requeried');
+      throw new Error('investimentRate is required');
     }
     if (rate < 0) {
       throw new Error('investimentRate is positive');

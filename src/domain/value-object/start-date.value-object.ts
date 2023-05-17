@@ -8,7 +8,7 @@ export class StartDate {
   }
 
   private validate(startDate: Date, dateComparison: Date) {
-    if (!startDate) throw new Error('StartDate is requeried');
+    if (!startDate) throw new Error('StartDate is required');
     if (startDate > dateComparison) throw new Error('startDate in the future');
   }
 }
