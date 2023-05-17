@@ -11,7 +11,7 @@ export class TypeOfInvestment {
     const MAX_CHARACTER = 20;
 
     if (!typeOfInvestment) {
-      throw new Error('typeOfInvestment is requeried');
+      throw new Error('typeOfInvestment is required');
     }
     if (typeOfInvestment.length > MAX_CHARACTER) {
       throw new Error('typeOfInvestment is length max ' + MAX_CHARACTER);

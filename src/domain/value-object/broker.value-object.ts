@@ -11,7 +11,7 @@ export class Broker {
     const MAX_CHARACTER = 150;
 
     if (!value) {
-      throw new Error('broker is requeried');
+      throw new Error('broker is required');
     }
     if (value.length > MAX_CHARACTER) {
       throw new Error('broker is length max ' + MAX_CHARACTER);

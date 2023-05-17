@@ -9,7 +9,7 @@ export class Money {
 
   private validate(money: number) {
     if (!money) {
-      throw new Error('value is requeried');
+      throw new Error('value is required');
     }
     if (money < 0) {
       throw new Error('value is number positive');
