@@ -1,0 +1,18 @@
+version: '3.1'
+services:
+  mysql_test:
+    container_name: 'mysql-test'
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    env_file:
+      - ../../../../env/.env.test
+    ports:
+      - '${DATABASE_PORT}:3306'
+    restart: unless-stopped
+    volumes:
+      - mysql_test_data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=${DATABASE_NAME}
+      - MYSQL_USER=${DATABASE_USER}
+      - MYSQL_PASSWORD=${DATABASE_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${DATABASE_ROOT_PASSWORD}
