@@ -37,3 +37,6 @@ lerna-debug.log*
 #sonar
 .scannerwork
 sonar-project.properties
+
+#env
+.env.*
