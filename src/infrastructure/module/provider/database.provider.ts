@@ -1,4 +1,4 @@
-import DatabaseConfig from 'src/infrastructure/config/database.cofing';
+import DatabaseConfig from '../../../../src/infrastructure/config/database.cofing';
 import { DataSource } from 'typeorm';
 import { MysqlDataSourceToken } from '../token/app.tokens';
 

@@ -1,0 +1,7 @@
+{
+  "IS_NUMBER": "{property} must be numeric",
+  "IS_STRING": "{property} must be string",
+  "IS_NUMBER_STRING": "{property} must be number in string",
+  "IS_NOT_EMPTY": "{property} can not be empty",
+  "MIN": "{property} with value: \"{value}\" needs to be at least {constraints.0}"
+}
