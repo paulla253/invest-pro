@@ -13,9 +13,9 @@ export const databaseProviders = [
         password: DatabaseConfig.PASSWORD,
         port: DatabaseConfig.PORT,
         database: DatabaseConfig.DATABASE,
-        entities: [__dirname + '/../../../**/*.entity{.ts,.js}'],
+        migrations: [`${__dirname}/../../../../migration/{.ts,*.js}`],
+        migrationsRun: true,
       });
-
       return dataSource;
     },
   },
