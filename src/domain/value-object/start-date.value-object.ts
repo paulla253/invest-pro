@@ -1,10 +1,12 @@
+import { DateUtil } from '../../common/util/date.util';
+
 export class StartDate {
   constructor(private startDate: Date, dateComparison = new Date()) {
     this.validate(startDate, dateComparison);
   }
 
-  public value(): number {
-    return this.startDate.getTime();
+  public get value(): string {
+    return DateUtil.formatDateYYYYMMDD(this.startDate);
   }
 
   private validate(startDate: Date, dateComparison: Date) {

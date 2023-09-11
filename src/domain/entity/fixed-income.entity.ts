@@ -8,37 +8,69 @@ import { StartDate } from '../value-object/start-date.value-object';
 import { TypeOfInvestment } from '../value-object/type-of-investment.value-object';
 
 export class FixedIncome {
-  private money: Money;
-  private rate: Rate;
-  private typeOfInvestment: TypeOfInvestment;
-  private broker: Broker;
-  private institution: Institution;
-  private startDate: StartDate;
-  private minDate: MinDate;
-  private endDate: EndDate;
+  private _money: Money;
+  private _rate: Rate;
+  private _typeOfInvestment: TypeOfInvestment;
+  private _broker: Broker;
+  private _institution: Institution;
+  private _startDate: StartDate;
+  private _minDate: MinDate;
+  private _endDate: EndDate;
 
   constructor(payload: TPayloadFixedIncome) {
-    this.money = new Money(payload.money);
-    this.rate = new Rate(payload.rate);
-    this.typeOfInvestment = new TypeOfInvestment(payload.typeOfInvestment);
-    this.broker = new Broker(payload.broker);
-    this.institution = new Institution(payload.institution);
-    this.startDate = new StartDate(payload.startDate);
-    this.endDate = new EndDate(payload.endDate);
-    this.minDate = new MinDate(payload.minDate);
+    this._money = new Money(payload.money);
+    this._rate = new Rate(payload.rate);
+    this._typeOfInvestment = new TypeOfInvestment(payload.typeOfInvestment);
+    this._broker = new Broker(payload.broker);
+    this._institution = new Institution(payload.institution);
+    this._startDate = new StartDate(payload.startDate);
+    this._endDate = new EndDate(payload.endDate);
+    this._minDate = new MinDate(payload.minDate);
   }
 
   public value(): TFixedIncome {
     return {
-      money: this.money.value(),
-      rate: this.rate.value(),
-      typeOfInvestment: this.typeOfInvestment.value(),
-      broker: this.broker.value(),
-      institution: this.institution.value(),
-      startDate: this.startDate.value(),
-      minDate: this.minDate.value(),
-      endDate: this.endDate.value(),
+      money: this._money.value,
+      rate: this._rate.value,
+      typeOfInvestment: this._typeOfInvestment.value,
+      broker: this._broker.value,
+      institution: this._institution.value,
+      startDate: this._startDate.value,
+      minDate: this._minDate.value,
+      endDate: this._endDate.value,
     };
+  }
+
+  public get money(): number {
+    return this._money.value;
+  }
+
+  public get rate(): number {
+    return this._rate.value;
+  }
+
+  public get typeOfInvestment(): string {
+    return this._typeOfInvestment.value;
+  }
+
+  public get broker(): string {
+    return this._broker.value;
+  }
+
+  public get institution(): string {
+    return this._institution.value;
+  }
+
+  public get startDate(): string {
+    return this._startDate.value;
+  }
+
+  public get minDate(): string {
+    return this._minDate.value;
+  }
+
+  public get endDate(): string {
+    return this._endDate.value;
   }
 }
 
@@ -59,7 +91,7 @@ export type TFixedIncome = {
   typeOfInvestment: string;
   broker: string;
   institution: string;
-  startDate: number;
-  minDate: number;
-  endDate: number;
+  startDate: string;
+  minDate: string;
+  endDate: string;
 };
