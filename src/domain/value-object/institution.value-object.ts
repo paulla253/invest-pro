@@ -3,7 +3,7 @@ export class Institution {
     this.validate(institution);
   }
 
-  public value(): string {
+  public get value(): string {
     return this.institution.toUpperCase();
   }
 
