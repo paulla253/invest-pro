@@ -1,4 +1,4 @@
-import DatabaseConfig from '../../../../src/infrastructure/config/database.cofing';
+import DatabaseConfig from '../../../infrastructure/config/database.cofing';
 import { DataSource } from 'typeorm';
 import { MysqlDataSourceToken } from '../token/app.tokens';
 
@@ -13,7 +13,7 @@ export const databaseProviders = [
         password: DatabaseConfig.PASSWORD,
         port: DatabaseConfig.PORT,
         database: DatabaseConfig.DATABASE,
-        migrations: [`${__dirname}/../../../../migration/{.ts,*.js}`],
+        migrations: [`${__dirname}/../../../../migration/{*.ts,*.js}`],
         migrationsRun: true,
       });
       return dataSource;
