@@ -3,7 +3,7 @@ export class Rate {
     this.validate(rate);
   }
 
-  public value(): number {
+  public get value(): number {
     return this.rate;
   }
 

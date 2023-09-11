@@ -3,7 +3,7 @@ export class TypeOfInvestment {
     this.validate(typeOfInvestment);
   }
 
-  public value(): string {
+  public get value(): string {
     return this.typeOfInvestment.toUpperCase();
   }
 
