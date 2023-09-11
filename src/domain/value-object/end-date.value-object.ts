@@ -1,10 +1,12 @@
+import { DateUtil } from '../../common/util/date.util';
+
 export class EndDate {
   constructor(private readonly endDate: Date) {
     this.validate(endDate);
   }
 
-  public value(): number {
-    return this.endDate.getTime();
+  public get value(): string {
+    return DateUtil.formatDateYYYYMMDD(this.endDate);
   }
 
   private validate(endDate: Date) {
