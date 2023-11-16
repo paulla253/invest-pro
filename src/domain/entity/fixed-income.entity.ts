@@ -1,5 +1,6 @@
 import { Broker } from '../value-object/broker.value-object';
 import { EndDate } from '../value-object/end-date.value-object';
+import { Index } from '../value-object/index.value-object';
 import { Institution } from '../value-object/institution.value-object';
 import { MinDate } from '../value-object/min-date.value-object';
 import { Money } from '../value-object/money.value-object';
@@ -16,6 +17,7 @@ export class FixedIncome {
   private _startDate: StartDate;
   private _minDate: MinDate;
   private _endDate: EndDate;
+  private _index: Index;
 
   constructor(payload: TPayloadFixedIncome) {
     this._money = new Money(payload.money);
@@ -26,6 +28,7 @@ export class FixedIncome {
     this._startDate = new StartDate(payload.startDate);
     this._endDate = new EndDate(payload.endDate);
     this._minDate = new MinDate(payload.minDate);
+    this._index = new Index(payload.index);
   }
 
   public value(): TFixedIncome {
@@ -72,6 +75,10 @@ export class FixedIncome {
   public get endDate(): string {
     return this._endDate.value;
   }
+
+  public get index(): string {
+    return this._index.value;
+  }
 }
 
 export type TPayloadFixedIncome = {
@@ -80,6 +87,7 @@ export type TPayloadFixedIncome = {
   typeOfInvestment: string;
   broker: string;
   institution: string;
+  index: string;
   startDate: Date;
   minDate: Date;
   endDate: Date;
